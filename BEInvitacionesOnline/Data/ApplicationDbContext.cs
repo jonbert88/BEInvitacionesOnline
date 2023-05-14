@@ -13,7 +13,7 @@ namespace BEInvitacionesOnline.Data
         public DbSet<Profile> Profiles { get; set; }
         public DbSet<User> Users { get;set; }
         public DbSet<Payment> Payments { get; set; }
-        public DbSet<TypeTemplate> TypeTemplates { get; set;}   
+        public DbSet<TypesTemplate> TypeTemplates { get; set;}   
         public DbSet<Template> Templates { get; set; }
         public DbSet<Information> Informations { get; set; }
         public DbSet<Invitation> Invitations { get;set; }

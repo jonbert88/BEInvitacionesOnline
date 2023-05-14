@@ -1,0 +1,95 @@
+﻿@model BEInvitacionesOnline.Models.Template
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Template</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="id" />
+            <div class="form-group">
+                <label asp-for="idTypeTemplate" class="control-label"></label>
+                <select asp-for="idTypeTemplate" class="form-control" asp-items="ViewBag.idTypeTemplate"></select>
+                <span asp-validation-for="idTypeTemplate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nombrePlantilla" class="control-label"></label>
+                <input asp-for="nombrePlantilla" class="form-control" />
+                <span asp-validation-for="nombrePlantilla" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="divHeader" class="control-label"></label>
+                <input asp-for="divHeader" class="form-control" />
+                <span asp-validation-for="divHeader" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="divContentCero" class="control-label"></label>
+                <input asp-for="divContentCero" class="form-control" />
+                <span asp-validation-for="divContentCero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="divContentOne" class="control-label"></label>
+                <input asp-for="divContentOne" class="form-control" />
+                <span asp-validation-for="divContentOne" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="divContentTwo" class="control-label"></label>
+                <input asp-for="divContentTwo" class="form-control" />
+                <span asp-validation-for="divContentTwo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="divContentThree" class="control-label"></label>
+                <input asp-for="divContentThree" class="form-control" />
+                <span asp-validation-for="divContentThree" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="divContentFour" class="control-label"></label>
+                <input asp-for="divContentFour" class="form-control" />
+                <span asp-validation-for="divContentFour" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="divContentFive" class="control-label"></label>
+                <input asp-for="divContentFive" class="form-control" />
+                <span asp-validation-for="divContentFive" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="divContentSix" class="control-label"></label>
+                <input asp-for="divContentSix" class="form-control" />
+                <span asp-validation-for="divContentSix" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="divContentSeven" class="control-label"></label>
+                <input asp-for="divContentSeven" class="form-control" />
+                <span asp-validation-for="divContentSeven" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="divContentEight" class="control-label"></label>
+                <input asp-for="divContentEight" class="form-control" />
+                <span asp-validation-for="divContentEight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="divContentFooter" class="control-label"></label>
+                <input asp-for="divContentFooter" class="form-control" />
+                <span asp-validation-for="divContentFooter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

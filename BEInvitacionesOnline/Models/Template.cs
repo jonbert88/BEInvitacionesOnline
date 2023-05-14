@@ -12,7 +12,7 @@ namespace BEInvitacionesOnline.Models
         public int idTypeTemplate { get; set; }
 
         [ForeignKey("idTypeTemplate")]
-        public TypeTemplate? TypeTemplate { get; set; }
+        public TypesTemplate? TypeTemplate { get; set; }
 
         [Required]
         public string nombrePlantilla { get; set; }

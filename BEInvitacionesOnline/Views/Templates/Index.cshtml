@@ -1,0 +1,108 @@
+﻿@model IEnumerable<BEInvitacionesOnline.Models.Template>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TypeTemplate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nombrePlantilla)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.divHeader)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.divContentCero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.divContentOne)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.divContentTwo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.divContentThree)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.divContentFour)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.divContentFive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.divContentSix)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.divContentSeven)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.divContentEight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.divContentFooter)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeTemplate.typeTemp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombrePlantilla)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.divHeader)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.divContentCero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.divContentOne)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.divContentTwo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.divContentThree)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.divContentFour)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.divContentFive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.divContentSix)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.divContentSeven)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.divContentEight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.divContentFooter)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
